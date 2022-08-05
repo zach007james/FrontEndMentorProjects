@@ -1,0 +1,148 @@
+/* CSS RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  background-color: #edf2f8;
+}
+
+/* Primary Colors */
+:root {
+  --purple: hsl(263, 55%, 52%);
+  --gray: hsl(217, 19%, 35%);
+  --black: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Neutral Colors */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+}
+
+/* 
+Font: Barlow Semi Condensed; weights: 500,600
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap');
+
+
+.purpleCard,
+.greyCard,
+.whiteCard1,
+.whiteCard2,
+.blackCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 8px;
+  margin-bottom: 10px;
+}
+
+div.purpleCard {
+  background-color: var(--purple);
+  color: white;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px right 100px;
+  grid-column: 1 / 3;
+}
+
+div.greyCard {
+  background-color: var(--gray);
+  color: white;
+}
+
+div.whiteCard1 {
+  background-color: var(--white);
+  color: black;
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+div.whiteCard2 {
+  background-color: var(--white);
+  color: black;
+}
+
+div.blackCard {
+  background-color: var(--black);
+  color: white;
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+div.testimonials {
+  max-width: 1440px;
+  margin: 100px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+p.cardLead {
+  font-weight: 600;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cardHeader h3 {
+  font-size: 15px;
+}
+
+.cardHeader p {
+  opacity: 50%;
+}
+
+.cardImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #996ed9;
+  margin-right: 10px;
+}
+
+.cardLead {
+  font-size: 1.5 rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.cardQuote {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 70%;
+}
+
+@media(max-width: 768px) {
+  div.testimonials {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  div.purpleCard {
+    grid-column: 1;
+    grid-row: ;
+  }
+
+  div.whiteCard1 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  div.blackCard {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+}
